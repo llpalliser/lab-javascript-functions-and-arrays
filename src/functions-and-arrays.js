@@ -42,7 +42,7 @@ sumNumbers(numbers);
 
 const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
-function sum (array = []) {
+function sum (array) {
   
   let total = 0;
   for (let element of array) {
@@ -59,8 +59,12 @@ function sum (array = []) {
     } 
     else {total}
 }
+if (array === undefined || array === null){
+return null; 
+} else {
+return total;
+}
 
-return total; 
 }
 sum (mixedArr)
 
@@ -270,6 +274,17 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+function howManyTimes (array, word) {
+  let numberTimes = 0;
+  
+    for (let item of array) {
+      if (item === word) {
+        numberTimes++
+      }    
+    }
+    return numberTimes;
+  }
+
 
 // Iteration #8: Bonus
 
